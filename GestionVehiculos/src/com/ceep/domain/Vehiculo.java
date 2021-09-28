@@ -79,6 +79,7 @@ public class Vehiculo {
         System.out.println("Color: " + color);
         System.out.println("Tarifa: " + tarifa);
         System.out.println("Disponible: " + disponible);
+        System.out.println("");
 
     }
     
