@@ -1,10 +1,12 @@
 package com.ceep.domain;
 
 public class Vehiculo {
-
+    
+    private int idVehiculo;
     private String matricula, marca, modelo, color;
     private Double tarifa;
     private Boolean disponible;
+    private static int contadorVehiculos;
 
     //Getters and Setters
     public String getMatricula() {
@@ -54,6 +56,12 @@ public class Vehiculo {
     public void setDisponible(Boolean disponible) {
         this.disponible = disponible;
     }
+
+    public int getIdVehiculo() {
+        return idVehiculo;
+    }
+    
+    
     
     //Constructores
 
@@ -64,15 +72,18 @@ public class Vehiculo {
         this.color = color;
         this.tarifa = tarifa;
         this.disponible = disponible;
+        
              
     }
 
     public Vehiculo() {
+        this.idVehiculo = ++Vehiculo.contadorVehiculos;
     }
     
     //Metodos
     
     public void mostrar() {
+        System.out.println("idVehiculo: " + idVehiculo);
         System.out.println("Matricula: " + matricula);
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
